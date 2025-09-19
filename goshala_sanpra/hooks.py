@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Supplier": "public/js/update_age.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -138,33 +138,31 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
+# 	"Purchase Receipt": {
+# 		"before_save": "goshala_sanpra.public.py.purchase_receipt.get_data"
 # 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"goshala_sanpra.tasks.all"
 # 	],
-# 	"daily": [
-# 		"goshala_sanpra.tasks.daily"
-# 	],
+	# "daily": [
+	# 	"goshala_sanpra.custom_pyfile.cal_age.update_all_suppliers_age"
+	# ],
 # 	"hourly": [
 # 		"goshala_sanpra.tasks.hourly"
 # 	],
 # 	"weekly": [
 # 		"goshala_sanpra.tasks.weekly"
 # 	],
-# 	"monthly": [
-# 		"goshala_sanpra.tasks.monthly"
-# 	],
-# }
+	"monthly": [
+		"goshala_sanpra.custom_pyfile.cal_age.update_all_suppliers_age"
+	],
+}
 
 # Testing
 # -------

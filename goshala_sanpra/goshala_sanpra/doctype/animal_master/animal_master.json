@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:animal_type",
+ "creation": "2025-07-08 11:41:19.609269",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "animal_type",
+  "item_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "animal_type",
+   "fieldtype": "Data",
+   "label": "Animal Type",
+   "unique": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "link_filters": "[[\"Item\",\"disabled\",\"=\",0],[\"Item\",\"item_group\",\"=\",\"Raw Milk\"]]",
+   "options": "Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-31 01:19:58.567804",
+ "modified_by": "yashshah209.ys@gmail.com",
+ "module": "goshala_sanpra",
+ "name": "Animal Master",
+ "naming_rule": "By fieldname",
+ "owner": "pranav@sanpra.co.in",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
